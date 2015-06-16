@@ -1,0 +1,18 @@
+angular.module('app', ['ngNewRouter','app.home','app.detail'])
+.controller('AppController', ['$router', AppController]);
+  // app.controller('HomeController', ['$router', HomeController]);
+
+
+
+function AppController ($router) {
+	$router.config([
+    { path: '/', component: 'home' },
+  	{ path: '/detail/:id', component: 'detail' }
+  ]);
+}
+
+// function HomeController ($router) {
+// 	 this.name = 'amet';
+
+// }
+

@@ -1,0 +1,14 @@
+<div class="containter">
+	<div class="col-xs-12">
+		<h3>Hallo {{detail.name}}</h3>
+		<p>detail : {{detail.city}}</p>
+		<a ng-link="home">CLick</a>
+		<input type="search" ng-model="q" placeholder="filter friends..." aria-label="filter friends"  class="form-control" />
+		<div ng-repeat="model in detail.data | filter:q as results" ng-mouseenter="detail.city = model.City">
+		    {{model.Name}}
+		</div>
+		<div ng-if="results.length == 0">
+			<strong>No results found...</strong>
+		</div>
+	</div>
+</div> 
